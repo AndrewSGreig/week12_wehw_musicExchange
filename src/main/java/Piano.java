@@ -1,13 +1,16 @@
-public class Piano extends Instrument implements IPlay{
+public class Piano extends Instrument implements IPlay, ISell{
     private String pianoType;
     private String keyboardType;
+    private Double buyingPrice;
+    private Double sellingPrice;
 
 
-    public Piano(String pianoType, String keyboardType) {
+    public Piano(String pianoType, String keyboardType, Double buyingPrice, Double sellingPrice) {
         super("wood", "brown", "keyboard");
-
         this.pianoType = pianoType;
         this.keyboardType = keyboardType;
+        this.buyingPrice = buyingPrice;
+        this.sellingPrice = sellingPrice;
     }
 
     public String getPianoType() {
@@ -28,5 +31,9 @@ public class Piano extends Instrument implements IPlay{
 
     public String play() {
         return "PIANO!";
+    }
+
+    public double calculateMarkup() {
+        return this.sellingPrice - this.buyingPrice;
     }
 }

@@ -10,8 +10,14 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        leadGuitar = new Guitar("Acoustic", 6);
-        bass = new Guitar("Bass", 5);
+        leadGuitar = new Guitar("Acoustic", 6, 50.00, 60.00);
+        bass = new Guitar("Bass", 5, 40.00, 55.00);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(10.00, leadGuitar.calculateMarkup(),0.01);
+        assertEquals(15.00, bass.calculateMarkup(), 0.01);
     }
 
     @Test
