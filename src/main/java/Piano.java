@@ -6,7 +6,7 @@ public class Piano extends Instrument implements IPlay, ISell{
 
 
     public Piano(String pianoType, String keyboardType, Double buyingPrice, Double sellingPrice) {
-        super("wood", "brown", "keyboard");
+        super("piano", "wood", "brown", "keyboard");
         this.pianoType = pianoType;
         this.keyboardType = keyboardType;
         this.buyingPrice = buyingPrice;

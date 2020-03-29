@@ -1,12 +1,22 @@
 public abstract class Instrument {
+    protected String name;
     protected String material;
     protected String colour;
     protected String type;
 
-    public Instrument(String material, String colour, String type) {
+    public Instrument(String name, String material, String colour, String type) {
+        this.name = name;
         this.material = material;
         this.colour = colour;
         this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMaterial() {

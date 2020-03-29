@@ -8,7 +8,7 @@ public class GuitarStringsTest {
 
     @Before
     public void before(){
-        guitarStrings = new GuitarStrings(5.00, 6.99);
+        guitarStrings = new GuitarStrings("Guitar strings",5.00, 6.99);
     }
 
     @Test
